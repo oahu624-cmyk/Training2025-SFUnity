@@ -18,4 +18,10 @@ public class Rollers extends SubsystemBase {
   public Command RunRollersFast(){
     return run(()-> io.RunVolts(15));
   }
+  public Command StopRollers(){
+    return run(()-> io.RunVolts(0));
+  }
+  public Command RunRollersSlow(){
+    return run(()-> io.RunVolts(5));
+  }
 }
